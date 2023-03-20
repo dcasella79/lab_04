@@ -78,7 +78,9 @@ def     complex_n_water_liebe93(freq,t):
     # t                 temperature in K
     #OUTPUT
     # complex_n         complex refractive index
-
+    if np.isscalar( freq):
+        freq=[freq]
+        
     nf=len(freq)
     complex_n=np.empty((nf,2))
     complex_n[:]=np.nan
